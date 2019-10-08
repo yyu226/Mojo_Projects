@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6
+# Build 269223 by xbuild on Wed Jun  5 11:17:50 MDT 2013
+# Start of session at: Tue Apr 09 17:08:17 2019
+# Process ID: 39212
+# Log file: C:/Users/Ying Yu/Desktop/Mojo_v3/purple_inout/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Ying Yu/Desktop/Mojo_v3/purple_inout/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Ying Yu/Desktop/Mojo_v3/purple_inout/pa.fromNetlist.tcl}
+startgroup
+set_property package_pin P5 [get_ports LS_OE2]
+endgroup
+startgroup
+set_property package_pin P7 [get_ports CT_HPD2]
+endgroup
+startgroup
+set_property package_pin P100 [get_ports LS_OE1]
+endgroup
+startgroup
+set_property package_pin P102 [get_ports CT_HPD1]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list LS_OE2]]
+set_property iostandard LVCMOS33 [get_ports [list LS_OE1]]
+set_property iostandard LVCMOS33 [get_ports [list CT_HPD2]]
+set_property iostandard LVCMOS33 [get_ports [list CT_HPD1]]
+save_constraints

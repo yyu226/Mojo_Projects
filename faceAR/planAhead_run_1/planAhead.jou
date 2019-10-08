@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6
+# Build 269223 by xbuild on Wed Jun  5 11:17:50 MDT 2013
+# Start of session at: Fri Sep 20 17:17:38 2019
+# Process ID: 22964
+# Log file: C:/Users/Ying Yu/Desktop/Mojo_v3/faceAR/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Ying Yu/Desktop/Mojo_v3/faceAR/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Ying Yu/Desktop/Mojo_v3/faceAR/pa.fromNetlist.tcl}

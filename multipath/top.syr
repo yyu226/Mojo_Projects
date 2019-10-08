@@ -1,0 +1,2048 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\ipcore_dir\dcm.v" into library work
+Parsing module <dcm>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\DRAM16XN.v" into library work
+Parsing module <DRAM16XN>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\spi_slave.v" into library work
+Parsing module <spi_slave>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\serial_tx.v" into library work
+Parsing module <serial_tx>.
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\serial_tx.v" Line 14. parameter declaration becomes local in serial_tx with formal parameter declaration list
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\serial_rx.v" into library work
+Parsing module <serial_rx>.
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\serial_rx.v" Line 12. parameter declaration becomes local in serial_rx with formal parameter declaration list
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\serdes_n_to_1.v" into library work
+Parsing module <serdes_n_to_1>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\encode.v" into library work
+Parsing module <encode>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\convert_30to15_fifo.v" into library work
+Parsing module <convert_30to15_fifo>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\cclk_detector.v" into library work
+Parsing module <cclk_detector>.
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\cclk_detector.v" Line 10. parameter declaration becomes local in cclk_detector with formal parameter declaration list
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\ipcore_dir\ddsc.v" into library work
+Parsing module <ddsc>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v" into library work
+Parsing module <i2c_master>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\hdmi_top.v" into library work
+Parsing module <hdmi_top>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\edgedtct_f.v" into library work
+Parsing module <edgedtct_f>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\edgedtct.v" into library work
+Parsing module <edgedtct>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\dvi_encoder_top.v" into library work
+Parsing module <dvi_encoder_top>.
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\avr_interface.v" into library work
+Parsing module <avr_interface>.
+INFO:HDLCompiler:693 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\avr_interface.v" Line 83. parameter declaration becomes local in avr_interface with formal parameter declaration list
+Analyzing Verilog file "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+Reading initialization file \"ti2010lc.txt\".
+WARNING:HDLCompiler:817 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 90: System task fdisplay ignored for synthesis
+
+Elaborating module <i2c_master>.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v" Line 102: Result of 8-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v" Line 106: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <dcm>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=8,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=10,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=8,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=40,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\ipcore_dir\dcm.v" Line 124: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\ipcore_dir\dcm.v" Line 125: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\ipcore_dir\dcm.v" Line 126: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\ipcore_dir\dcm.v" Line 127: Assignment to locked_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v" Line 126: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v" Line 223: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v" Line 258: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v" Line 260: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v" Line 262: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 101: Assignment to CLK_40M ignored, since the identifier is never used
+
+Elaborating module <PLL_BASE(CLKIN_PERIOD=10,CLKFBOUT_MULT=10,CLKOUT0_DIVIDE=1,CLKOUT1_DIVIDE=10,CLKOUT2_DIVIDE=5,COMPENSATION="INTERNAL")>.
+
+Elaborating module <BUFPLL(DIVIDE=5)>.
+
+Elaborating module <hdmi_top>.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\hdmi_top.v" Line 143: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\hdmi_top.v" Line 153: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\hdmi_top.v" Line 172: Assignment to red ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\hdmi_top.v" Line 173: Assignment to green ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\hdmi_top.v" Line 174: Assignment to blue ignored, since the identifier is never used
+
+Elaborating module <dvi_encoder_top>.
+
+Elaborating module <serdes_n_to_1(SF=5)>.
+
+Elaborating module <OSERDES2(DATA_WIDTH=5,DATA_RATE_OQ="SDR",DATA_RATE_OT="SDR",SERDES_MODE="MASTER",OUTPUT_MODE="DIFFERENTIAL")>.
+
+Elaborating module <OSERDES2(DATA_WIDTH=5,DATA_RATE_OQ="SDR",DATA_RATE_OT="SDR",SERDES_MODE="SLAVE",OUTPUT_MODE="DIFFERENTIAL")>.
+
+Elaborating module <OBUFDS>.
+
+Elaborating module <encode>.
+
+Elaborating module <convert_30to15_fifo>.
+
+Elaborating module <FDC>.
+
+Elaborating module <DRAM16XN(data_width=30)>.
+
+Elaborating module <RAM16X1D>.
+
+Elaborating module <FDP>.
+
+Elaborating module <FD>.
+
+Elaborating module <FDR>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <FDE>.
+WARNING:HDLCompiler:189 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 178: Size mismatch in connection of port <green_din>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 194: Size mismatch in connection of port <green_din>. Formal port size is 8-bit while actual signal size is 32-bit.
+
+Elaborating module <avr_interface(CLK_RATE=50000000,SERIAL_BAUD_RATE=500000)>.
+
+Elaborating module <cclk_detector(CLK_RATE=50000000)>.
+
+Elaborating module <spi_slave>.
+
+Elaborating module <serial_rx(CLK_PER_BIT=100)>.
+
+Elaborating module <serial_tx(CLK_PER_BIT=100)>.
+WARNING:HDLCompiler:189 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\avr_interface.v" Line 98: Size mismatch in connection of port <block>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <edgedtct>.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\edgedtct.v" Line 15: Assignment to q4 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 257: Result of 12-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <ddsc>.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 284: Assignment to magnt ignored, since the identifier is never used
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 303: Signal <co_n> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 319: Result of 14-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 325: Signal <co_K> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 454: Signal <goo> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 459: Assignment to wrst ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 521: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <edgedtct_f>.
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\edgedtct_f.v" Line 15: Assignment to q4 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 544: Assignment to re_vs ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 561: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:552 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" Line 208: Input port rx is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v".
+WARNING:Xst:2898 - Port 'channel', unconnected in block instance 'INSTANTIATION1', is tied to GND.
+WARNING:Xst:2898 - Port 'tx_data', unconnected in block instance 'INSTANTIATION1', is tied to GND.
+WARNING:Xst:2898 - Port 'rx', unconnected in block instance 'INSTANTIATION1', is tied to GND.
+WARNING:Xst:2898 - Port 'new_tx_data', unconnected in block instance 'INSTANTIATION1', is tied to GND.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 99: Output port <wLED> of the instance <PROGAMMABLE_OSC> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 99: Output port <CLOCK_OUT1> of the instance <PROGAMMABLE_OSC> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 154: Output port <LED> of the instance <HDMI_TIMING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 208: Output port <spi_channel> of the instance <INSTANTIATION1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 208: Output port <sample> of the instance <INSTANTIATION1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 208: Output port <sample_channel> of the instance <INSTANTIATION1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 208: Output port <rx_data> of the instance <INSTANTIATION1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 208: Output port <tx> of the instance <INSTANTIATION1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 208: Output port <tx_busy> of the instance <INSTANTIATION1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 208: Output port <new_rx_data> of the instance <INSTANTIATION1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 268: Output port <cosine> of the instance <PROJECTOR_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 278: Output port <cosine> of the instance <PROJECTOR_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\top.v" line 541: Output port <re> of the instance <VSYNC_R> is unconnected or connected to loadless signal.
+WARNING:Xst:2999 - Signal 'lutn', unconnected in block 'top', is tied to its initial value.
+    Found 1024x8-bit dual-port RAM <Mram_lut> for signal <lut>.
+    Found 1024x8-bit single-port Read Only RAM <Mram_lutn> for signal <lutn>.
+    Found 3-bit register for signal <state>.
+    Found 3-bit register for signal <sync_state>.
+    Found 3-bit register for signal <Pre_state>.
+    Found 8-bit register for signal <trig_count>.
+    Found 16-bit register for signal <frame>.
+    Found 11-bit register for signal <m>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_100m (rising_edge)                         |
+    | Reset              | GND_1_o_GND_1_o_equal_121_o (positive)         |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 11-bit adder for signal <m[10]_GND_1_o_add_4_OUT> created at line 257.
+    Found 13-bit adder for signal <n0174> created at line 319.
+    Found 8-bit adder for signal <trig_count[7]_GND_1_o_add_139_OUT> created at line 521.
+    Found 16-bit adder for signal <frame[15]_GND_1_o_add_153_OUT> created at line 561.
+    Found 64x32-bit Read Only RAM for signal <_n1415>
+    Found 8x64-bit Read Only RAM for signal <_n1475>
+    Found 11-bit comparator greater for signal <n0005> created at line 254
+    Found 16-bit comparator greater for signal <frame[15]_GND_1_o_LessThan_110_o> created at line 446
+    Found 3-bit comparator equal for signal <n0139> created at line 512
+    Found 8-bit comparator lessequal for signal <n0148> created at line 528
+    Summary:
+	inferred   4 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  41 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  18 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <i2c_master>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\i2c_master.v".
+        STAND_BY = 0
+        START_C = 1
+        SLV_ADDR = 2
+        REG_ADDR = 3
+        REG_DATA = 4
+        STOP_C1 = 5
+        STOP_C2 = 6
+        NOT_ACK = 7
+        UW_STOP1 = 8
+        UW_STOP2 = 9
+        REG_N1 = 8'b00000000
+        REG_N2 = 8'b00100011
+        REG_N3 = 8'b00101001
+        REG_N4 = 8'b01000001
+        REG_N5 = 8'b01010111
+        REG_N6 = 8'b01100001
+        REG_N7 = 8'b00001000
+        REG_N8 = 8'b01000000
+        REG_N9 = 8'b00000000
+        REG_N10 = 8'b00000001
+        REG_N11 = 8'b00000100
+WARNING:Xst:2999 - Signal 'aslave', unconnected in block 'i2c_master', is tied to its initial value.
+    Found 8x1-bit single-port Read Only RAM <Mram_aslave> for signal <aslave>.
+    Found 1-bit register for signal <clk_400k>.
+    Found 32-bit register for signal <delay_cntr>.
+    Found 1-bit register for signal <START>.
+    Found 1-bit register for signal <DDS_START>.
+    Found 1-bit register for signal <rscl>.
+    Found 1-bit register for signal <sda_oe>.
+    Found 1-bit register for signal <rsda>.
+    Found 8-bit register for signal <toc>.
+    Found 4-bit register for signal <rLED>.
+    Found 8-bit register for signal <areg>.
+    Found 8-bit register for signal <dreg>.
+    Found 4-bit register for signal <kSLV>.
+    Found 4-bit register for signal <kREG>.
+    Found 4-bit register for signal <kDATA>.
+    Found 4-bit register for signal <state>.
+    Found 6-bit register for signal <divc>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 21                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 13                                             |
+    | Clock              | clk_400k (rising_edge)                         |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <divc[5]_GND_2_o_add_13_OUT> created at line 126.
+    Found 32-bit adder for signal <delay_cntr[31]_GND_2_o_add_20_OUT> created at line 146.
+    Found 8-bit adder for signal <toc[7]_GND_2_o_add_48_OUT> created at line 223.
+    Found 4-bit adder for signal <kSLV[3]_GND_2_o_add_62_OUT> created at line 258.
+    Found 4-bit adder for signal <kREG[3]_GND_2_o_add_64_OUT> created at line 260.
+    Found 4-bit adder for signal <kDATA[3]_GND_2_o_add_66_OUT> created at line 262.
+    Found 3-bit subtractor for signal <GND_2_o_GND_2_o_sub_40_OUT<2:0>> created at line 188.
+    Found 3-bit subtractor for signal <GND_2_o_GND_2_o_sub_43_OUT<2:0>> created at line 197.
+    Found 3-bit subtractor for signal <GND_2_o_GND_2_o_sub_46_OUT<2:0>> created at line 206.
+    Found 16x16-bit Read Only RAM for signal <_n0410>
+    Found 1-bit 7-to-1 multiplexer for signal <GND_2_o_areg[7]_Mux_43_o> created at line 197.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_2_o_dreg[7]_Mux_46_o> created at line 206.
+    Found 1-bit tristate buffer for signal <SDA> created at line 105
+    Found 32-bit comparator greater for signal <delay_cntr[31]_GND_2_o_LessThan_18_o> created at line 138
+    Found 32-bit comparator lessequal for signal <delay_cntr[31]_GND_2_o_LessThan_20_o> created at line 144
+    Found 4-bit comparator lessequal for signal <n0053> created at line 190
+    Found 4-bit comparator lessequal for signal <n0057> created at line 199
+    Found 4-bit comparator lessequal for signal <n0061> created at line 208
+    Found 8-bit comparator greater for signal <toc[7]_GND_2_o_LessThan_83_o> created at line 278
+    Found 4-bit comparator greater for signal <kSLV[3]_PWR_2_o_LessThan_86_o> created at line 286
+    Found 4-bit comparator greater for signal <kREG[3]_PWR_2_o_LessThan_91_o> created at line 297
+    Found 4-bit comparator greater for signal <kDATA[3]_PWR_2_o_LessThan_96_o> created at line 308
+    Summary:
+	inferred   2 RAM(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred  84 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred  24 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <i2c_master> synthesized.
+
+Synthesizing Unit <dcm>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\ipcore_dir\dcm.v".
+    Summary:
+	no macro.
+Unit <dcm> synthesized.
+
+Synthesizing Unit <hdmi_top>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\hdmi_top.v".
+        HAPIX = 11'b01101010110
+        HFPOR = 11'b00000010101
+        HSPUL = 11'b00001010101
+        HBPOR = 11'b00001101010
+        VAPIX = 11'b00111100000
+        VFPOR = 11'b00000001100
+        VSPUL = 11'b00000000010
+        VBPOR = 11'b00000011110
+WARNING:Xst:647 - Input <clock_TMDS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <HDMI_START> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 12-bit register for signal <contX>.
+    Found 12-bit register for signal <contY>.
+    Found 1-bit register for signal <syncH>.
+    Found 1-bit register for signal <syncV>.
+    Found 1-bit register for signal <actvA>.
+    Found 32-bit register for signal <cntr>.
+    Found 32-bit adder for signal <cntr[31]_GND_10_o_add_1_OUT> created at line 134.
+    Found 12-bit adder for signal <contX[11]_GND_10_o_add_6_OUT> created at line 143.
+    Found 12-bit adder for signal <contY[11]_GND_10_o_add_12_OUT> created at line 153.
+    Found 12-bit comparator lessequal for signal <n0011> created at line 160
+    Found 12-bit comparator greater for signal <contX[11]_GND_10_o_LessThan_19_o> created at line 160
+    Found 12-bit comparator lessequal for signal <n0016> created at line 162
+    Found 12-bit comparator greater for signal <contY[11]_GND_10_o_LessThan_22_o> created at line 162
+    Found 12-bit comparator greater for signal <contX[11]_GND_10_o_LessThan_24_o> created at line 164
+    Found 12-bit comparator greater for signal <contY[11]_GND_10_o_LessThan_27_o> created at line 167
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <hdmi_top> synthesized.
+
+Synthesizing Unit <dvi_encoder_top>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\dvi_encoder_top.v".
+    Found 1-bit register for signal <toggle>.
+    Found 5-bit register for signal <tmdsclkint>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <dvi_encoder_top> synthesized.
+
+Synthesizing Unit <serdes_n_to_1>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\serdes_n_to_1.v".
+        SF = 5
+    Summary:
+	no macro.
+Unit <serdes_n_to_1> synthesized.
+
+Synthesizing Unit <encode>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\encode.v".
+        CTRLTOKEN0 = 10'b1101010100
+        CTRLTOKEN1 = 10'b0010101011
+        CTRLTOKEN2 = 10'b0101010100
+        CTRLTOKEN3 = 10'b1010101011
+    Found 10-bit register for signal <dout>.
+    Found 5-bit register for signal <cnt>.
+    Found 8-bit register for signal <din_q>.
+    Found 4-bit register for signal <n1q_m>.
+    Found 4-bit register for signal <n0q_m>.
+    Found 1-bit register for signal <de_q>.
+    Found 1-bit register for signal <de_reg>.
+    Found 1-bit register for signal <c0_q>.
+    Found 1-bit register for signal <c0_reg>.
+    Found 1-bit register for signal <c1_q>.
+    Found 1-bit register for signal <c1_reg>.
+    Found 9-bit register for signal <q_m_reg>.
+    Found 4-bit register for signal <n1d>.
+    Found 4-bit subtractor for signal <PWR_16_o_BUS_0017_sub_29_OUT> created at line 110.
+    Found 5-bit subtractor for signal <n0233> created at line 169.
+    Found 5-bit subtractor for signal <n0235> created at line 175.
+    Found 5-bit subtractor for signal <n0236> created at line 175.
+    Found 2-bit adder for signal <n0183[1:0]> created at line 66.
+    Found 3-bit adder for signal <n0186[2:0]> created at line 66.
+    Found 2-bit adder for signal <n0204[1:0]> created at line 109.
+    Found 3-bit adder for signal <n0207[2:0]> created at line 109.
+    Found 5-bit adder for signal <n0232> created at line 169.
+    Found 5-bit adder for signal <cnt[4]_GND_16_o_add_47_OUT> created at line 169.
+    Found 5-bit adder for signal <cnt[4]_GND_16_o_add_50_OUT> created at line 175.
+    Found 4-bit adder for signal <_n0248> created at line 66.
+    Found 4-bit adder for signal <_n0249> created at line 66.
+    Found 4-bit adder for signal <_n0250> created at line 66.
+    Found 4-bit adder for signal <_n0251> created at line 66.
+    Found 4-bit adder for signal <BUS_0003_GND_16_o_add_7_OUT> created at line 66.
+    Found 4-bit adder for signal <_n0253> created at line 109.
+    Found 4-bit adder for signal <_n0254> created at line 109.
+    Found 4-bit adder for signal <_n0255> created at line 109.
+    Found 4-bit adder for signal <_n0256> created at line 109.
+    Found 4-bit adder for signal <BUS_0010_GND_16_o_add_20_OUT> created at line 109.
+    Found 5-bit adder for signal <cnt[4]_GND_16_o_sub_41_OUT> created at line 162.
+    Found 5-bit adder for signal <cnt[4]_GND_16_o_sub_43_OUT> created at line 162.
+    Found 4x10-bit Read Only RAM for signal <c1_reg_PWR_16_o_wide_mux_53_OUT>
+    Found 4-bit comparator greater for signal <GND_16_o_n1d[3]_LessThan_11_o> created at line 77
+    Found 4-bit comparator equal for signal <n1q_m[3]_n0q_m[3]_equal_33_o> created at line 121
+    Found 4-bit comparator greater for signal <n0q_m[3]_n1q_m[3]_LessThan_34_o> created at line 125
+    Found 4-bit comparator greater for signal <n1q_m[3]_n0q_m[3]_LessThan_35_o> created at line 125
+    Summary:
+	inferred   1 RAM(s).
+	inferred  23 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  37 Multiplexer(s).
+Unit <encode> synthesized.
+
+Synthesizing Unit <convert_30to15_fifo>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\convert_30to15_fifo.v".
+        ADDR0 = 4'b0000
+        ADDR1 = 4'b0001
+        ADDR2 = 4'b0010
+        ADDR3 = 4'b0011
+        ADDR4 = 4'b0100
+        ADDR5 = 4'b0101
+        ADDR6 = 4'b0110
+        ADDR7 = 4'b0111
+        ADDR8 = 4'b1000
+        ADDR9 = 4'b1001
+        ADDR10 = 4'b1010
+        ADDR11 = 4'b1011
+        ADDR12 = 4'b1100
+        ADDR13 = 4'b1101
+        ADDR14 = 4'b1110
+        ADDR15 = 4'b1111
+    Set property "ASYNC_REG = TRUE" for instance <fdp_rst>.
+INFO:Xst:3210 - "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\convert_30to15_fifo.v" line 64: Output port <O_DATA_OUT> of the instance <fifo_u> is unconnected or connected to loadless signal.
+    Found 16x4-bit Read Only RAM for signal <wa_d>
+    Found 16x4-bit Read Only RAM for signal <ra_d>
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <convert_30to15_fifo> synthesized.
+
+Synthesizing Unit <DRAM16XN>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\DRAM16XN.v".
+        data_width = 30
+    Summary:
+	no macro.
+Unit <DRAM16XN> synthesized.
+
+Synthesizing Unit <avr_interface>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\avr_interface.v".
+        CLK_RATE = 50000000
+        SERIAL_BAUD_RATE = 500000
+WARNING:Xst:647 - Input <tx_block> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit register for signal <sample_q>.
+    Found 1-bit register for signal <new_sample_q>.
+    Found 8-bit register for signal <spi_rcv_q>.
+    Found 4-bit register for signal <sample_channel_q>.
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 111
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 111
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 111
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 111
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 112
+    Found 1-bit tristate buffer for signal <tx> created at line 113
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_rcv_d<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_rcv_d<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_rcv_d<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_rcv_d<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_rcv_d<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_rcv_d<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_rcv_d<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <spi_rcv_d<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred   6 Tristate(s).
+Unit <avr_interface> synthesized.
+
+Synthesizing Unit <cclk_detector>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\cclk_detector.v".
+        CLK_RATE = 50000000
+    Found 1-bit register for signal <ready_q>.
+    Found 10-bit register for signal <ctr_q>.
+    Found 10-bit adder for signal <ctr_q[9]_GND_27_o_add_2_OUT> created at line 24.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <cclk_detector> synthesized.
+
+Synthesizing Unit <spi_slave>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\spi_slave.v".
+    Found 3-bit register for signal <bit_ct_q>.
+    Found 8-bit register for signal <dout_q>.
+    Found 1-bit register for signal <miso_q>.
+    Found 1-bit register for signal <sck_q>.
+    Found 1-bit register for signal <mosi_q>.
+    Found 1-bit register for signal <ss_q>.
+    Found 8-bit register for signal <data_q>.
+    Found 1-bit register for signal <sck_old_q>.
+    Found 1-bit register for signal <done_q>.
+    Found 3-bit adder for signal <bit_ct_q[2]_GND_28_o_add_1_OUT> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <spi_slave> synthesized.
+
+Synthesizing Unit <serial_rx>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\serial_rx.v".
+        CLK_PER_BIT = 100
+    Found 3-bit register for signal <bit_ctr_q>.
+    Found 1-bit register for signal <new_data_q>.
+    Found 2-bit register for signal <state_q>.
+    Found 8-bit register for signal <data_q>.
+    Found 7-bit register for signal <ctr_q>.
+    Found finite state machine <FSM_2> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit adder for signal <ctr_q[6]_GND_29_o_add_7_OUT> created at line 54.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_29_o_add_9_OUT> created at line 57.
+    WARNING:Xst:2404 -  FFs/Latches <rx_q<0:0>> (without init value) have a constant value of 0 in block <serial_rx>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serial_rx> synthesized.
+
+Synthesizing Unit <serial_tx>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\serial_tx.v".
+        CLK_PER_BIT = 100
+    Found 1-bit register for signal <tx_q>.
+    Found 3-bit register for signal <bit_ctr_q>.
+    Found 7-bit register for signal <ctr_q>.
+    Found 1-bit register for signal <busy_q>.
+    Found 2-bit register for signal <state_q>.
+INFO:Xst:1799 - State 10 is never reached in FSM <state_q>.
+INFO:Xst:1799 - State 11 is never reached in FSM <state_q>.
+    Found finite state machine <FSM_3> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 1                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    WARNING:Xst:2404 -  FFs/Latches <block_q<0:0>> (without init value) have a constant value of 0 in block <serial_tx>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <serial_tx> synthesized.
+
+Synthesizing Unit <edgedtct>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\edgedtct.v".
+    Summary:
+	no macro.
+Unit <edgedtct> synthesized.
+
+Synthesizing Unit <edgedtct_f>.
+    Related source file is "C:\Users\Ying Yu\Desktop\Mojo_v3\multipath\edgedtct_f.v".
+    Summary:
+	no macro.
+Unit <edgedtct_f> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 1024x8-bit dual-port RAM                              : 1
+ 1024x8-bit single-port Read Only RAM                  : 1
+ 16x16-bit single-port Read Only RAM                   : 1
+ 16x4-bit single-port Read Only RAM                    : 4
+ 4x10-bit single-port Read Only RAM                    : 6
+ 64x32-bit single-port Read Only RAM                   : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+ 8x64-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 158
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 1
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 2-bit adder                                           : 12
+ 3-bit adder                                           : 14
+ 3-bit subtractor                                      : 3
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 63
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 30
+ 5-bit subtractor                                      : 18
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 2
+# Registers                                            : 122
+ 1-bit register                                        : 45
+ 10-bit register                                       : 8
+ 11-bit register                                       : 1
+ 12-bit register                                       : 2
+ 16-bit register                                       : 1
+ 2-bit register                                        : 6
+ 3-bit register                                        : 4
+ 32-bit register                                       : 2
+ 4-bit register                                        : 23
+ 5-bit register                                        : 8
+ 6-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 14
+ 9-bit register                                        : 6
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 43
+ 11-bit comparator greater                             : 1
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 2
+ 16-bit comparator greater                             : 1
+ 3-bit comparator equal                                : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator equal                                : 6
+ 4-bit comparator greater                              : 21
+ 4-bit comparator lessequal                            : 3
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 279
+ 1-bit 2-to-1 multiplexer                              : 209
+ 1-bit 7-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 7
+ 15-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 20
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 24
+ 7-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 3
+# Tristates                                            : 7
+ 1-bit tristate buffer                                 : 7
+# FSMs                                                 : 4
+# Xors                                                 : 84
+ 1-bit xor2                                            : 84
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ddsc.ngc>.
+Loading core <ddsc> for timing and area information for instance <PROJECTOR_1>.
+Loading core <ddsc> for timing and area information for instance <PROJECTOR_2>.
+WARNING:Xst:1290 - Hierarchical block <serial_rx> is unconnected in block <INSTANTIATION1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <serial_tx> is unconnected in block <INSTANTIATION1>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <tmdsclkint_0> in Unit <PORT_1> is equivalent to the following 4 FFs/Latches, which will be removed : <tmdsclkint_1> <tmdsclkint_2> <tmdsclkint_3> <tmdsclkint_4> 
+INFO:Xst:2261 - The FF/Latch <tmdsclkint_0> in Unit <PORT_2> is equivalent to the following 4 FFs/Latches, which will be removed : <tmdsclkint_1> <tmdsclkint_2> <tmdsclkint_3> <tmdsclkint_4> 
+WARNING:Xst:1426 - The value init of the FF/Latch rscl hinder the constant cleaning in the block PROGAMMABLE_OSC.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <c0_q> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c1_q> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c0_q> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c1_q> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_7> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_6> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_5> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_4> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_3> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_2> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_1> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_0> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c0_q> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_0> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_1> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_2> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_3> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_4> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_5> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_6> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <din_q_7> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c1_q> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c0_q> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <c1_q> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c0_reg> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c1_reg> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c1_reg> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c0_reg> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c0_reg> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c1_reg> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q_m_reg_0> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <q_m_reg_0> (without init value) has a constant value of 0 in block <encg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c0_reg> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <c1_reg> (without init value) has a constant value of 0 in block <encr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <areg_4> of sequential type is unconnected in block <PROGAMMABLE_OSC>.
+WARNING:Xst:2677 - Node <areg_5> of sequential type is unconnected in block <PROGAMMABLE_OSC>.
+WARNING:Xst:2677 - Node <areg_6> of sequential type is unconnected in block <PROGAMMABLE_OSC>.
+WARNING:Xst:2677 - Node <dreg_7> of sequential type is unconnected in block <PROGAMMABLE_OSC>.
+WARNING:Xst:2404 -  FFs/Latches <data_q<7:0>> (without init value) have a constant value of 0 in block <serial_rx>.
+
+Synthesizing (advanced) Unit <cclk_detector>.
+The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
+Unit <cclk_detector> synthesized (advanced).
+
+Synthesizing (advanced) Unit <convert_30to15_fifo>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_wa_d> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <wa>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <wa_d>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ra_d> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ra>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <ra_d>          |          |
+    -----------------------------------------------------------------------
+Unit <convert_30to15_fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <encode>.
+	The following adders/subtractors are grouped into adder tree <Madd_BUS_0010_GND_16_o_add_20_OUT_Madd1> :
+ 	<Madd__n0253> in block <encode>, 	<Madd__n0254> in block <encode>, 	<Madd__n0256_Madd> in block <encode>, 	<Madd_n0204[1:0]> in block <encode>, 	<Madd_BUS_0010_GND_16_o_add_20_OUT_Madd> in block <encode>.
+	The following adders/subtractors are grouped into adder tree <Madd_BUS_0003_GND_16_o_add_7_OUT_Madd1> :
+ 	<Madd__n0248> in block <encode>, 	<Madd__n0249> in block <encode>, 	<Madd__n0251_Madd> in block <encode>, 	<Madd_n0183[1:0]> in block <encode>, 	<Madd_BUS_0003_GND_16_o_add_7_OUT_Madd> in block <encode>.
+INFO:Xst:3231 - The small RAM <Mram_c1_reg_PWR_16_o_wide_mux_53_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 10-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(c1_reg,c0_reg)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3217 - HDL ADVISOR - Register <dout> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_c1_reg_PWR_16_o_wide_mux_53_OUT> for implementation on block RAM resources if you made this reset synchronous instead.
+Unit <encode> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hdmi_top>.
+The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
+The following registers are absorbed into counter <contX>: 1 register on signal <contX>.
+The following registers are absorbed into counter <contY>: 1 register on signal <contY>.
+Unit <hdmi_top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <i2c_master>.
+The following registers are absorbed into counter <divc>: 1 register on signal <divc>.
+The following registers are absorbed into counter <delay_cntr>: 1 register on signal <delay_cntr>.
+The following registers are absorbed into counter <toc>: 1 register on signal <toc>.
+The following registers are absorbed into counter <kSLV>: 1 register on signal <kSLV>.
+The following registers are absorbed into counter <kREG>: 1 register on signal <kREG>.
+The following registers are absorbed into counter <kDATA>: 1 register on signal <kDATA>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0410> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <toc<3:0>>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_aslave> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <GND_2_o_GND_2_o_sub_40_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <i2c_master> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serial_rx>.
+The following registers are absorbed into counter <bit_ctr_q>: 1 register on signal <bit_ctr_q>.
+Unit <serial_rx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_slave>.
+The following registers are absorbed into counter <bit_ct_q>: 1 register on signal <bit_ct_q>.
+Unit <spi_slave> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top>.
+The following registers are absorbed into counter <frame>: 1 register on signal <frame>.
+The following registers are absorbed into counter <m>: 1 register on signal <m>.
+The following registers are absorbed into counter <trig_count>: 1 register on signal <trig_count>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_lut> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     clkA           | connected to signal <CLK_50M>       | rise     |
+    |     weA            | connected to signal <n0005_0>       | low      |
+    |     addrA          | connected to signal <m<9:0>>        |          |
+    |     diA            | connected to signal <rx_spi>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     addrB          | connected to signal <pout1>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1475> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 64-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <frame<2:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_lutn> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <pout2>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1415> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0174<5:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <top> synthesized (advanced).
+WARNING:Xst:2677 - Node <areg_4> of sequential type is unconnected in block <i2c_master>.
+WARNING:Xst:2677 - Node <areg_5> of sequential type is unconnected in block <i2c_master>.
+WARNING:Xst:2677 - Node <areg_6> of sequential type is unconnected in block <i2c_master>.
+WARNING:Xst:2677 - Node <dreg_7> of sequential type is unconnected in block <i2c_master>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 1024x8-bit dual-port distributed RAM                  : 1
+ 1024x8-bit single-port distributed Read Only RAM      : 1
+ 16x16-bit single-port distributed Read Only RAM       : 1
+ 16x4-bit single-port distributed Read Only RAM        : 4
+ 4x10-bit single-port distributed Read Only RAM        : 6
+ 64x32-bit single-port distributed Read Only RAM       : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+ 8x64-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 59
+ 3-bit subtractor                                      : 3
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 30
+ 5-bit subtractor                                      : 18
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Adder Trees                                          : 12
+ 4-bit / 6-inputs adder tree                           : 12
+# Counters                                             : 15
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 12-bit up counter                                     : 2
+ 16-bit up counter                                     : 1
+ 3-bit up counter                                      : 2
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 3
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 536
+ Flip-Flops                                            : 536
+# Comparators                                          : 43
+ 11-bit comparator greater                             : 1
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 2
+ 16-bit comparator greater                             : 1
+ 3-bit comparator equal                                : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator equal                                : 6
+ 4-bit comparator greater                              : 21
+ 4-bit comparator lessequal                            : 3
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 272
+ 1-bit 2-to-1 multiplexer                              : 208
+ 1-bit 7-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 6
+ 15-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 20
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 24
+ 7-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 4
+# Xors                                                 : 84
+ 1-bit xor2                                            : 84
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch rscl hinder the constant cleaning in the block i2c_master.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <sample_channel_q_0> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_channel_q_1> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_channel_q_2> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_channel_q_3> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_0> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_1> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_2> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_3> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_4> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_5> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_6> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_7> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_8> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sample_q_9> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <tmdsclkint_0> in Unit <dvi_encoder_top> is equivalent to the following 4 FFs/Latches, which will be removed : <tmdsclkint_1> <tmdsclkint_2> <tmdsclkint_3> <tmdsclkint_4> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 011   | 011
+ 100   | 100
+ 001   | 001
+ 010   | 010
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <PROGAMMABLE_OSC/FSM_1> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0111  | 0111
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 1000  | 1000
+ 1001  | 1001
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <INSTANTIATION1/FSM_3> on signal <state_q[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 10    | unreached
+ 11    | unreached
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <INSTANTIATION1/FSM_2> on signal <state_q[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+WARNING:Xst:1710 - FF/Latch <serial_tx/tx_q> (without init value) has a constant value of 1 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <cntr_30> of sequential type is unconnected in block <hdmi_top>.
+WARNING:Xst:2677 - Node <cntr_31> of sequential type is unconnected in block <hdmi_top>.
+INFO:Xst:1901 - Instance PIXEL_CLOCK/pll_base_inst in unit PIXEL_CLOCK/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:1901 - Instance PLL_EXT in unit PLL_EXT of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <n1q_m_0> in Unit <encode> is equivalent to the following FF/Latch, which will be removed : <n0q_m_0> 
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <n1q_m_0> is unconnected in block <encode>.
+WARNING:Xst:2677 - Node <PROGAMMABLE_OSC/rLED_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PROGAMMABLE_OSC/rLED_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PROGAMMABLE_OSC/rLED_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <PROGAMMABLE_OSC/rLED_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/state_q_FSM_FFd1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/state_q_FSM_FFd2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/bit_ctr_q_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/bit_ctr_q_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/bit_ctr_q_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/new_data_q> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/ctr_q_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/ctr_q_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/ctr_q_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/ctr_q_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/ctr_q_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/ctr_q_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <INSTANTIATION1/serial_rx/ctr_q_6> of sequential type is unconnected in block <top>.
+
+Optimizing unit <DRAM16XN> ...
+
+Optimizing unit <top> ...
+
+Optimizing unit <spi_slave> ...
+
+Optimizing unit <dvi_encoder_top> ...
+
+Optimizing unit <encode> ...
+WARNING:Xst:1710 - FF/Latch <cnt_0> (without init value) has a constant value of 0 in block <encode>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <convert_30to15_fifo> ...
+
+Optimizing unit <hdmi_top> ...
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/din_q_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/din_q_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/din_q_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/din_q_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/din_q_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/din_q_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/din_q_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encr/c1_q> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encr/c0_q> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n0q_m_3> (without init value) has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n0q_m_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n0q_m_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n1q_m_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n1q_m_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n1q_m_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/q_m_reg_8> (without init value) has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/q_m_reg_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/q_m_reg_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/q_m_reg_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/q_m_reg_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/q_m_reg_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/q_m_reg_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/q_m_reg_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/din_q_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/c0_q> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/c1_q> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n1d_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n1d_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n1d_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/n1d_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/din_q_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/din_q_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encr/c1_q> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encr/c0_q> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n0q_m_3> (without init value) has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n0q_m_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n0q_m_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n1q_m_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n1q_m_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n1q_m_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/q_m_reg_8> (without init value) has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/q_m_reg_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/q_m_reg_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/q_m_reg_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/q_m_reg_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/q_m_reg_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/q_m_reg_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/q_m_reg_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/din_q_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/din_q_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_2/encg/din_q_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n1d_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n1d_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n1d_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/n1d_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/c1_q> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/c0_q> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/din_q_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/din_q_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <PORT_1/encg/din_q_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_2/encg/c0_reg> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_2/encg/c1_reg> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_2/encg/q_m_reg_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_2/encr/c0_reg> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_2/encr/c1_reg> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_1/encg/c0_reg> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_1/encg/c1_reg> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_1/encg/q_m_reg_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_1/encr/c0_reg> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PORT_1/encr/c1_reg> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_TIMING/cntr_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:1293 - FF/Latch <HDMI_TIMING/contX_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n0q_m_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n0q_m_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/din_q_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/din_q_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n0q_m_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n0q_m_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/din_q_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/din_q_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_4> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_5> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/din_q_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/din_q_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_6> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/din_q_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/din_q_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_7> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/din_q_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/din_q_4> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_8> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/din_q_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/din_q_5> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/din_q_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/din_q_6> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encb/c1_reg> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/c1_reg> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/cnt_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encg/cnt_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/cnt_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encg/cnt_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/cnt_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encg/cnt_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/cnt_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/cnt_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/cnt_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encg/cnt_4> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/cnt_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/cnt_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/cnt_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/cnt_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/cnt_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/cnt_4> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/de_q> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <PORT_1/encg/de_q> <PORT_1/encb/de_q> <PORT_2/encr/de_q> <PORT_2/encg/de_q> <PORT_2/encb/de_q> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n1q_m_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n1q_m_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n1q_m_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n1q_m_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n1q_m_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n1q_m_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n1d_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n1d_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n1d_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n1d_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n1d_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n1d_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/tmdsclkint_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/tmdsclkint_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n1d_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n1d_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_4> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_5> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_6> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_7> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/q_m_reg_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/q_m_reg_8> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n0q_m_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n0q_m_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/cnt_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/cnt_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/din_q_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/din_q_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/toggle> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/toggle> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/din_q_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/din_q_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n0q_m_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n0q_m_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/cnt_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/cnt_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/cnt_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/cnt_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/din_q_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/din_q_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/cnt_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/cnt_4> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/din_q_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/din_q_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/din_q_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/din_q_4> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/de_reg> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <PORT_1/encg/de_reg> <PORT_1/encb/de_reg> <PORT_2/encr/de_reg> <PORT_2/encg/de_reg> <PORT_2/encb/de_reg> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/din_q_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/din_q_5> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/din_q_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/din_q_6> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encb/c0_q> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/c0_q> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encb/c0_reg> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/c0_reg> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n1q_m_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n1q_m_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n1q_m_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n1q_m_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n1q_m_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n1q_m_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encb/c1_q> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/c1_q> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n1d_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n1d_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n1d_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n1d_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n1d_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n1d_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n1d_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n1d_3> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/q_m_reg_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/q_m_reg_1> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/din_q_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/din_q_7> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/dout_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encg/dout_8> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/din_q_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/din_q_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/dout_9> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <PORT_1/encg/dout_6> <PORT_1/encg/dout_4> <PORT_1/encg/dout_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encg/dout_7> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <PORT_2/encg/dout_5> <PORT_2/encg/dout_3> <PORT_2/encg/dout_1> <PORT_2/encg/dout_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encg/dout_9> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <PORT_2/encg/dout_6> <PORT_2/encg/dout_4> <PORT_2/encg/dout_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/dout_7> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <PORT_1/encg/dout_5> <PORT_1/encg/dout_3> <PORT_1/encg/dout_1> <PORT_1/encg/dout_0> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/dout_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encg/dout_9> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encg/dout_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encg/dout_7> 
+INFO:Xst:2261 - The FF/Latch <PORT_2/encr/n0q_m_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_2/encb/n0q_m_2> 
+INFO:Xst:2261 - The FF/Latch <PORT_1/encr/n0q_m_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <PORT_1/encb/n0q_m_2> 
+WARNING:Xst:2398 - RAMs <PORT_2/pixel2x/fifo_u/dram16s[24].i_RAM16X1D_U>, <PORT_2/pixel2x/fifo_u/dram16s[21].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_2/pixel2x/fifo_u/dram16s[24].i_RAM16X1D_U>, <PORT_2/pixel2x/fifo_u/dram16s[9].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_2/pixel2x/fifo_u/dram16s[24].i_RAM16X1D_U>, <PORT_2/pixel2x/fifo_u/dram16s[7].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_2/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U>, <PORT_2/pixel2x/fifo_u/dram16s[20].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_2/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U>, <PORT_2/pixel2x/fifo_u/dram16s[8].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_2/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U>, <PORT_2/pixel2x/fifo_u/dram16s[6].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_2/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U>, <PORT_2/pixel2x/fifo_u/dram16s[5].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_1/pixel2x/fifo_u/dram16s[24].i_RAM16X1D_U>, <PORT_1/pixel2x/fifo_u/dram16s[21].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_1/pixel2x/fifo_u/dram16s[24].i_RAM16X1D_U>, <PORT_1/pixel2x/fifo_u/dram16s[9].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_1/pixel2x/fifo_u/dram16s[24].i_RAM16X1D_U>, <PORT_1/pixel2x/fifo_u/dram16s[7].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_1/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U>, <PORT_1/pixel2x/fifo_u/dram16s[20].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_1/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U>, <PORT_1/pixel2x/fifo_u/dram16s[8].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_1/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U>, <PORT_1/pixel2x/fifo_u/dram16s[6].i_RAM16X1D_U> are equivalent
+WARNING:Xst:2398 - RAMs <PORT_1/pixel2x/fifo_u/dram16s[22].i_RAM16X1D_U>, <PORT_1/pixel2x/fifo_u/dram16s[5].i_RAM16X1D_U> are equivalent
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 28.
+INFO:Xst:2260 - The FF/Latch <FRAME_TRIGGER_WAIT_R/one> in Unit <top> is equivalent to the following FF/Latch : <FRAME_TRIGGER_WAIT_F/one> 
+INFO:Xst:2260 - The FF/Latch <PORT_1/pixel2x/fdp_rst> in Unit <top> is equivalent to the following FF/Latch : <PORT_2/pixel2x/fdp_rst> 
+INFO:Xst:2260 - The FF/Latch <VSYNC_R/one> in Unit <top> is equivalent to the following FF/Latch : <VSYNC_F/one> 
+FlipFlop PORT_1/encr/din_q_0 has been replicated 1 time(s)
+FlipFlop PORT_2/encr/din_q_0 has been replicated 1 time(s)
+FlipFlop PROGAMMABLE_OSC/state_FSM_FFd3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <top> :
+	Found 2-bit shift register for signal <PORT_1/encr/de_reg>.
+	Found 2-bit shift register for signal <PORT_1/encb/c1_reg>.
+	Found 2-bit shift register for signal <PORT_1/encb/c0_reg>.
+Unit <top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 447
+ Flip-Flops                                            : 447
+# Shift Registers                                      : 3
+ 2-bit shift register                                  : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1400
+#      GND                         : 3
+#      INV                         : 28
+#      LUT1                        : 91
+#      LUT2                        : 177
+#      LUT3                        : 80
+#      LUT4                        : 49
+#      LUT5                        : 147
+#      LUT6                        : 279
+#      MUXCY                       : 238
+#      MUXF7                       : 51
+#      MUXF8                       : 18
+#      VCC                         : 3
+#      XORCY                       : 236
+# FlipFlops/Latches                : 782
+#      FD                          : 385
+#      FD_1                        : 3
+#      FDC                         : 64
+#      FDE                         : 130
+#      FDE_1                       : 12
+#      FDP                         : 2
+#      FDR                         : 104
+#      FDRE                        : 65
+#      FDSE                        : 9
+#      LD                          : 8
+# RAMS                             : 126
+#      RAM16X1D                    : 60
+#      RAM64M                      : 32
+#      RAM64X1D                    : 32
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 3
+#      SRLC16E                     : 3
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 34
+#      IBUF                        : 8
+#      IBUFG                       : 1
+#      IOBUF                       : 1
+#      OBUF                        : 15
+#      OBUFDS                      : 8
+#      OBUFT                       : 1
+# Others                           : 19
+#      BUFPLL                      : 1
+#      OSERDES2                    : 16
+#      PLL_ADV                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             782  out of  11440     6%  
+ Number of Slice LUTs:                 1166  out of   5720    20%  
+    Number used as Logic:               851  out of   5720    14%  
+    Number used as Memory:              315  out of   1440    21%  
+       Number used as RAM:              312
+       Number used as SRL:                3
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1614
+   Number with an unused Flip Flop:     832  out of   1614    51%  
+   Number with an unused LUT:           448  out of   1614    27%  
+   Number of fully used LUT-FF pairs:   334  out of   1614    20%  
+   Number of unique control sets:        47
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  42  out of    102    41%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
+ Number of PLL_ADVs:                      2  out of      2   100%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+---------------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)           | Load  |
+-------------------------------------------------+---------------------------------+-------+
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2| BUFG                            | 53    |
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1| BUFG                            | 124   |
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0| BUFG                            | 41    |
+PROGAMMABLE_OSC/clk_400k                         | NONE(PROGAMMABLE_OSC/toc_7)     | 40    |
+INSTANTIATION1/spi_slave/done_q                  | NONE(INSTANTIATION1/spi_rcv_d_7)| 8     |
+PLL_EXT/CLKOUT2                                  | BUFG                            | 108   |
+PLL_EXT/CLKOUT1                                  | BUFG                            | 211   |
+HDMI_TIMING/syncH                                | BUFG                            | 326   |
+-------------------------------------------------+---------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.909ns (Maximum Frequency: 144.745MHz)
+   Minimum input arrival time before clock: 4.336ns
+   Maximum output required time after clock: 6.315ns
+   Maximum combinational path delay: 5.296ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2'
+  Clock period: 5.900ns (frequency: 169.480MHz)
+  Total number of paths / destination ports: 677 / 100
+-------------------------------------------------------------------------
+Delay:               5.900ns (Levels of Logic = 4)
+  Source:            frame_11 (FF)
+  Destination:       frame_1 (FF)
+  Source Clock:      PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2 rising
+  Destination Clock: PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2 rising
+
+  Data Path: frame_11 to frame_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.721  frame_11 (frame_11)
+     LUT2:I0->O            1   0.203   0.580  GND_1_o_GND_1_o_equal_86_o<15>11_SW0 (N102)
+     LUT6:I5->O           34   0.205   1.321  GND_1_o_GND_1_o_equal_86_o<15>11 (GND_1_o_GND_1_o_equal_86_o<15>11)
+     LUT6:I5->O            1   0.205   0.580  Mcount_frame_val_SW0 (N144)
+     LUT6:I5->O           16   0.205   1.004  Mcount_frame_val (Mcount_frame_val)
+     FDRE:R                    0.430          frame_0
+    ----------------------------------------
+    Total                      5.900ns (1.695ns logic, 4.205ns route)
+                                       (28.7% logic, 71.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1'
+  Clock period: 4.070ns (frequency: 245.721MHz)
+  Total number of paths / destination ports: 1392 / 696
+-------------------------------------------------------------------------
+Delay:               4.070ns (Levels of Logic = 2)
+  Source:            m_10 (FF)
+  Destination:       Mram_lut16 (RAM)
+  Source Clock:      PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1 rising
+  Destination Clock: PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1 rising
+
+  Data Path: m_10 to Mram_lut16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.447   0.879  m_10 (m_10)
+     LUT3:I0->O           16   0.205   1.349  n0005_01 (n0005_0)
+     LUT5:I0->O            4   0.203   0.683  write_ctrl15 (write_ctrl15)
+     RAM64M:WE                 0.304          Mram_lut16
+    ----------------------------------------
+    Total                      4.070ns (1.159ns logic, 2.911ns route)
+                                       (28.5% logic, 71.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0'
+  Clock period: 5.352ns (frequency: 186.836MHz)
+  Total number of paths / destination ports: 3575 / 81
+-------------------------------------------------------------------------
+Delay:               5.352ns (Levels of Logic = 7)
+  Source:            PROGAMMABLE_OSC/delay_cntr_8 (FF)
+  Destination:       PROGAMMABLE_OSC/delay_cntr_31 (FF)
+  Source Clock:      PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0 rising
+  Destination Clock: PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0 rising
+
+  Data Path: PROGAMMABLE_OSC/delay_cntr_8 to PROGAMMABLE_OSC/delay_cntr_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.447   1.059  PROGAMMABLE_OSC/delay_cntr_8 (PROGAMMABLE_OSC/delay_cntr_8)
+     LUT5:I0->O            1   0.203   0.000  PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_lut<0> (PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<0> (PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<1> (PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<2> (PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<2>)
+     MUXCY:CI->O           1   0.213   0.580  PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<3> (PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<3>)
+     LUT6:I5->O            2   0.205   0.617  PROGAMMABLE_OSC/Mcompar_delay_cntr[31]_INV_3_o_cy<4> (PROGAMMABLE_OSC/delay_cntr[31]_INV_3_o)
+     LUT2:I1->O           32   0.205   1.291  PROGAMMABLE_OSC/_n0320_inv1 (PROGAMMABLE_OSC/_n0320_inv)
+     FDE:CE                    0.322          PROGAMMABLE_OSC/delay_cntr_0
+    ----------------------------------------
+    Total                      5.352ns (1.805ns logic, 3.547ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PROGAMMABLE_OSC/clk_400k'
+  Clock period: 6.909ns (frequency: 144.745MHz)
+  Total number of paths / destination ports: 393 / 71
+-------------------------------------------------------------------------
+Delay:               3.454ns (Levels of Logic = 3)
+  Source:            PROGAMMABLE_OSC/state_FSM_FFd2 (FF)
+  Destination:       PROGAMMABLE_OSC/rsda (FF)
+  Source Clock:      PROGAMMABLE_OSC/clk_400k rising
+  Destination Clock: PROGAMMABLE_OSC/clk_400k falling
+
+  Data Path: PROGAMMABLE_OSC/state_FSM_FFd2 to PROGAMMABLE_OSC/rsda
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.447   1.093  PROGAMMABLE_OSC/state_FSM_FFd2 (PROGAMMABLE_OSC/state_FSM_FFd2)
+     LUT2:I1->O            2   0.205   0.617  PROGAMMABLE_OSC/state[3]_PWR_2_o_Mux_50_o4 (PROGAMMABLE_OSC/state[3]_PWR_2_o_Mux_50_o4)
+     LUT6:I5->O            1   0.205   0.580  PROGAMMABLE_OSC/state[3]_PWR_2_o_Mux_50_o6 (PROGAMMABLE_OSC/state[3]_PWR_2_o_Mux_50_o6)
+     LUT6:I5->O            1   0.205   0.000  PROGAMMABLE_OSC/state[3]_PWR_2_o_Mux_50_o7 (PROGAMMABLE_OSC/state[3]_PWR_2_o_Mux_50_o)
+     FD_1:D                    0.102          PROGAMMABLE_OSC/rsda
+    ----------------------------------------
+    Total                      3.454ns (1.164ns logic, 2.290ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL_EXT/CLKOUT2'
+  Clock period: 2.881ns (frequency: 347.120MHz)
+  Total number of paths / destination ports: 436 / 184
+-------------------------------------------------------------------------
+Delay:               2.881ns (Levels of Logic = 1)
+  Source:            PORT_1/pixel2x/sync_gen (FF)
+  Destination:       PORT_1/pixel2x/sync_gen (FF)
+  Source Clock:      PLL_EXT/CLKOUT2 rising
+  Destination Clock: PLL_EXT/CLKOUT2 rising
+
+  Data Path: PORT_1/pixel2x/sync_gen to PORT_1/pixel2x/sync_gen
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             50   0.447   1.547  PORT_1/pixel2x/sync_gen (PORT_1/pixel2x/sync)
+     INV:I->O              1   0.206   0.579  PORT_1/pixel2x/sync_INV_41_o1_INV_0 (PORT_1/pixel2x/sync_INV_41_o)
+     FDR:D                     0.102          PORT_1/pixel2x/sync_gen
+    ----------------------------------------
+    Total                      2.881ns (0.755ns logic, 2.126ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL_EXT/CLKOUT1'
+  Clock period: 6.682ns (frequency: 149.665MHz)
+  Total number of paths / destination ports: 6610 / 462
+-------------------------------------------------------------------------
+Delay:               6.682ns (Levels of Logic = 6)
+  Source:            PORT_1/encr/n1d_2 (FF)
+  Destination:       PORT_1/encr/n0q_m_2 (FF)
+  Source Clock:      PLL_EXT/CLKOUT1 rising
+  Destination Clock: PLL_EXT/CLKOUT1 rising
+
+  Data Path: PORT_1/encr/n1d_2 to PORT_1/encr/n0q_m_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.447   1.077  PORT_1/encr/n1d_2 (PORT_1/encr/n1d_2)
+     LUT4:I0->O            1   0.203   0.808  PORT_1/encr/Mmux_q_m<3>121 (PORT_1/encb/Mmux_q_m<3>12)
+     LUT6:I3->O            9   0.205   0.830  PORT_1/encr/Mmux_q_m<7>11 (PORT_1/encb/q_m<7>)
+     LUT6:I5->O            4   0.205   0.931  PORT_1/encr/ADDERTREE_INTERNAL_Madd91 (PORT_1/encb/ADDERTREE_INTERNAL_Madd9)
+     LUT5:I1->O            1   0.203   0.684  PORT_1/encr/Msub_PWR_16_o_BUS_0017_sub_29_OUT_xor<2>12 (PORT_1/encb/Msub_PWR_16_o_BUS_0017_sub_29_OUT_xor<2>11)
+     LUT6:I4->O            1   0.203   0.580  PORT_1/encr/Msub_PWR_16_o_BUS_0017_sub_29_OUT_xor<2>14_SW0 (N1051)
+     LUT6:I5->O            1   0.205   0.000  PORT_1/encr/Msub_PWR_16_o_BUS_0017_sub_29_OUT_xor<2>14 (PORT_1/encr/PWR_16_o_BUS_0017_sub_29_OUT<2>)
+     FD:D                      0.102          PORT_1/encr/n0q_m_2
+    ----------------------------------------
+    Total                      6.682ns (1.773ns logic, 4.909ns route)
+                                       (26.5% logic, 73.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'HDMI_TIMING/syncH'
+  Clock period: 2.436ns (frequency: 410.534MHz)
+  Total number of paths / destination ports: 5632 / 292
+-------------------------------------------------------------------------
+Delay:               2.436ns (Levels of Logic = 34)
+  Source:            PROJECTOR_2/blk00000022 (FF)
+  Destination:       PROJECTOR_2/blk00000106 (FF)
+  Source Clock:      HDMI_TIMING/syncH falling
+  Destination Clock: HDMI_TIMING/syncH falling
+
+  Data Path: PROJECTOR_2/blk00000022 to PROJECTOR_2/blk00000106
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.684  blk00000022 (sig00000065)
+     begin scope: 'PROJECTOR_2/blk000000a5:B<0>'
+     LUT2:I0->O            1   0.203   0.000  blk000000a6 (sig000001c9)
+     MUXCY:S->O            1   0.172   0.000  blk000000a7 (sig000001ca)
+     MUXCY:CI->O           1   0.019   0.000  blk000000aa (sig000001cc)
+     MUXCY:CI->O           1   0.019   0.000  blk000000ad (sig000001ce)
+     MUXCY:CI->O           1   0.019   0.000  blk000000b0 (sig000001d0)
+     MUXCY:CI->O           1   0.019   0.000  blk000000b3 (sig000001d2)
+     MUXCY:CI->O           1   0.019   0.000  blk000000b6 (sig000001d4)
+     MUXCY:CI->O           1   0.019   0.000  blk000000b9 (sig000001d6)
+     MUXCY:CI->O           1   0.019   0.000  blk000000bc (sig000001d8)
+     MUXCY:CI->O           1   0.019   0.000  blk000000bf (sig000001da)
+     MUXCY:CI->O           1   0.019   0.000  blk000000c2 (sig000001dc)
+     MUXCY:CI->O           1   0.019   0.000  blk000000c5 (sig000001de)
+     MUXCY:CI->O           1   0.019   0.000  blk000000c8 (sig000001e0)
+     MUXCY:CI->O           1   0.019   0.000  blk000000cb (sig000001e2)
+     MUXCY:CI->O           1   0.019   0.000  blk000000ce (sig000001e4)
+     MUXCY:CI->O           1   0.019   0.000  blk000000d1 (sig000001e6)
+     MUXCY:CI->O           1   0.019   0.000  blk000000d4 (sig000001e8)
+     MUXCY:CI->O           1   0.019   0.000  blk000000d7 (sig000001ea)
+     MUXCY:CI->O           1   0.019   0.000  blk000000da (sig000001ec)
+     MUXCY:CI->O           1   0.019   0.000  blk000000dd (sig000001ee)
+     MUXCY:CI->O           1   0.019   0.000  blk000000e0 (sig000001f0)
+     MUXCY:CI->O           1   0.019   0.000  blk000000e3 (sig000001f2)
+     MUXCY:CI->O           1   0.019   0.000  blk000000e6 (sig000001f4)
+     MUXCY:CI->O           1   0.019   0.000  blk000000e9 (sig000001f6)
+     MUXCY:CI->O           1   0.019   0.000  blk000000ec (sig000001f8)
+     MUXCY:CI->O           1   0.019   0.000  blk000000ef (sig000001fa)
+     MUXCY:CI->O           1   0.019   0.000  blk000000f2 (sig000001fc)
+     MUXCY:CI->O           1   0.019   0.000  blk000000f5 (sig000001fe)
+     MUXCY:CI->O           1   0.019   0.000  blk000000f8 (sig00000200)
+     MUXCY:CI->O           1   0.019   0.000  blk000000fb (sig00000202)
+     MUXCY:CI->O           1   0.019   0.000  blk000000fe (sig00000204)
+     MUXCY:CI->O           1   0.019   0.000  blk00000101 (sig00000206)
+     MUXCY:CI->O           1   0.258   0.000  blk00000104 (C_OUT<0>)
+     end scope: 'PROJECTOR_2/blk000000a5:C_OUT<0>'
+     FD:D                      0.102          blk00000106
+    ----------------------------------------
+    Total                      2.436ns (1.752ns logic, 0.684ns route)
+                                       (71.9% logic, 28.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              3.874ns (Levels of Logic = 2)
+  Source:            sync_in_1 (PAD)
+  Destination:       frame_1 (FF)
+  Destination Clock: PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2 rising
+
+  Data Path: sync_in_1 to frame_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   1.015  sync_in_1_IBUF (LED_7_OBUF)
+     LUT6:I0->O           16   0.203   1.004  Mcount_frame_val (Mcount_frame_val)
+     FDRE:R                    0.430          frame_0
+    ----------------------------------------
+    Total                      3.874ns (1.855ns logic, 2.019ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PROGAMMABLE_OSC/clk_400k'
+  Total number of paths / destination ports: 5 / 4
+-------------------------------------------------------------------------
+Offset:              3.245ns (Levels of Logic = 4)
+  Source:            SDA (PAD)
+  Destination:       PROGAMMABLE_OSC/state_FSM_FFd4 (FF)
+  Destination Clock: PROGAMMABLE_OSC/clk_400k rising
+
+  Data Path: SDA to PROGAMMABLE_OSC/state_FSM_FFd4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           3   1.222   0.755  SDA_IOBUF (N68)
+     LUT6:I4->O            2   0.203   0.617  PROGAMMABLE_OSC/state_FSM_FFd4-In2 (PROGAMMABLE_OSC/state_FSM_FFd4-In2)
+     LUT5:I4->O            1   0.205   0.000  PROGAMMABLE_OSC/state_FSM_FFd4-In6_G (N116)
+     MUXF7:I1->O           1   0.140   0.000  PROGAMMABLE_OSC/state_FSM_FFd4-In6 (PROGAMMABLE_OSC/state_FSM_FFd4-In)
+     FD:D                      0.102          PROGAMMABLE_OSC/state_FSM_FFd4
+    ----------------------------------------
+    Total                      3.245ns (1.872ns logic, 1.372ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 90 / 35
+-------------------------------------------------------------------------
+Offset:              4.336ns (Levels of Logic = 3)
+  Source:            CCLK (PAD)
+  Destination:       INSTANTIATION1/cclk_detector/ctr_q_9 (FF)
+  Destination Clock: PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1 rising
+
+  Data Path: CCLK to INSTANTIATION1/cclk_detector/ctr_q_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  CCLK_IBUF (CCLK_IBUF)
+     LUT6:I5->O            2   0.205   0.617  INSTANTIATION1/cclk_detector/ready_d_SW0 (N24)
+     LUT6:I5->O           10   0.205   0.856  INSTANTIATION1/cclk_detector/_n0021_inv (INSTANTIATION1/cclk_detector/_n0021_inv)
+     FDRE:CE                   0.322          INSTANTIATION1/cclk_detector/ctr_q_0
+    ----------------------------------------
+    Total                      4.336ns (1.954ns logic, 2.382ns route)
+                                       (45.1% logic, 54.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLL_EXT/CLKOUT2'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              2.986ns (Levels of Logic = 1)
+  Source:            ioclk_buf:LOCK (PAD)
+  Destination:       PORT_2/toggle (FF)
+  Destination Clock: PLL_EXT/CLKOUT2 rising
+
+  Data Path: ioclk_buf:LOCK to PORT_2/toggle
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BUFPLL:LOCK            1   0.000   0.579  ioclk_buf (bufpll_lock)
+     INV:I->O             84   0.206   1.771  bufpll_lock_INV_42_o1_INV_0 (bufpll_lock_INV_42_o)
+     FDC:CLR                   0.430          PORT_2/toggle
+    ----------------------------------------
+    Total                      2.986ns (0.636ns logic, 2.350ns route)
+                                       (21.3% logic, 78.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLL_EXT/CLKOUT1'
+  Total number of paths / destination ports: 63 / 63
+-------------------------------------------------------------------------
+Offset:              2.986ns (Levels of Logic = 1)
+  Source:            ioclk_buf:LOCK (PAD)
+  Destination:       PORT_1/encr/cnt_4 (FF)
+  Destination Clock: PLL_EXT/CLKOUT1 rising
+
+  Data Path: ioclk_buf:LOCK to PORT_1/encr/cnt_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BUFPLL:LOCK            1   0.000   0.579  ioclk_buf (bufpll_lock)
+     INV:I->O             84   0.206   1.771  bufpll_lock_INV_42_o1_INV_0 (bufpll_lock_INV_42_o)
+     FDC:CLR                   0.430          PORT_1/encr/dout_0
+    ----------------------------------------
+    Total                      2.986ns (0.636ns logic, 2.350ns route)
+                                       (21.3% logic, 78.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL_EXT/CLKOUT1'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              5.739ns (Levels of Logic = 3)
+  Source:            HDMI_TIMING/syncV (FF)
+  Destination:       LED<5> (PAD)
+  Source Clock:      PLL_EXT/CLKOUT1 rising
+
+  Data Path: HDMI_TIMING/syncV to LED<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.981  HDMI_TIMING/syncV (HDMI_TIMING/syncV)
+     LUT6:I0->O            1   0.203   0.684  sync_out_11 (sync_out_11)
+     LUT2:I0->O            3   0.203   0.650  sync_out_13 (sync_out_1_OBUF)
+     OBUF:I->O                 2.571          LED_5_OBUF (LED<5>)
+    ----------------------------------------
+    Total                      5.739ns (3.424ns logic, 2.315ns route)
+                                       (59.7% logic, 40.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 28 / 4
+-------------------------------------------------------------------------
+Offset:              5.753ns (Levels of Logic = 3)
+  Source:            trig_count_7 (FF)
+  Destination:       LED<5> (PAD)
+  Source Clock:      PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2 rising
+
+  Data Path: trig_count_7 to LED<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   0.995  trig_count_7 (trig_count_7)
+     LUT6:I1->O            1   0.203   0.684  sync_out_11 (sync_out_11)
+     LUT2:I0->O            3   0.203   0.650  sync_out_13 (sync_out_1_OBUF)
+     OBUF:I->O                 2.571          LED_5_OBUF (LED<5>)
+    ----------------------------------------
+    Total                      5.753ns (3.424ns logic, 2.329ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PROGAMMABLE_OSC/clk_400k'
+  Total number of paths / destination ports: 15 / 2
+-------------------------------------------------------------------------
+Offset:              6.315ns (Levels of Logic = 4)
+  Source:            PROGAMMABLE_OSC/kSLV_3 (FF)
+  Destination:       SCL (PAD)
+  Source Clock:      PROGAMMABLE_OSC/clk_400k rising
+
+  Data Path: PROGAMMABLE_OSC/kSLV_3 to SCL
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.447   0.943  PROGAMMABLE_OSC/kSLV_3 (PROGAMMABLE_OSC/kSLV_3)
+     LUT4:I1->O            1   0.205   0.580  SCL1 (SCL1)
+     LUT6:I5->O            1   0.205   0.580  SCL2 (SCL2)
+     LUT6:I5->O            1   0.205   0.579  SCL3 (SCL_OBUF)
+     OBUF:I->O                 2.571          SCL_OBUF (SCL)
+    ----------------------------------------
+    Total                      6.315ns (3.633ns logic, 2.682ns route)
+                                       (57.5% logic, 42.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.269ns (Levels of Logic = 3)
+  Source:            PROGAMMABLE_OSC/clk_400k (FF)
+  Destination:       SCL (PAD)
+  Source Clock:      PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0 rising
+
+  Data Path: PROGAMMABLE_OSC/clk_400k to SCL
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             34   0.447   1.685  PROGAMMABLE_OSC/clk_400k (PROGAMMABLE_OSC/clk_400k)
+     LUT6:I0->O            1   0.203   0.580  SCL2 (SCL2)
+     LUT6:I5->O            1   0.205   0.579  SCL3 (SCL_OBUF)
+     OBUF:I->O                 2.571          SCL_OBUF (SCL)
+    ----------------------------------------
+    Total                      6.269ns (3.426ns logic, 2.843ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            INSTANTIATION1/cclk_detector/ready_q (FF)
+  Destination:       SPI_MISO (PAD)
+  Source Clock:      PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1 rising
+
+  Data Path: INSTANTIATION1/cclk_detector/ready_q to SPI_MISO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.617  INSTANTIATION1/cclk_detector/ready_q (INSTANTIATION1/cclk_detector/ready_q)
+     LUT2:I1->O            1   0.205   0.579  INSTANTIATION1/ready_spi_ss_AND_39_o_inv1 (INSTANTIATION1/ready_spi_ss_AND_39_o_inv)
+     OBUFT:T->O                2.571          SPI_MISO_OBUFT (SPI_MISO)
+    ----------------------------------------
+    Total                      4.419ns (3.223ns logic, 1.196ns route)
+                                       (72.9% logic, 27.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL_EXT/CLKOUT2'
+  Total number of paths / destination ports: 40 / 40
+-------------------------------------------------------------------------
+Offset:              1.303ns (Levels of Logic = 0)
+  Source:            PORT_2/tmdsclkint_0 (FF)
+  Destination:       PORT_2/clkout/oserdes_m:D1 (PAD)
+  Source Clock:      PLL_EXT/CLKOUT2 rising
+
+  Data Path: PORT_2/tmdsclkint_0 to PORT_2/clkout/oserdes_m:D1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             10   0.447   0.856  PORT_2/tmdsclkint_0 (PORT_2/tmdsclkint_0)
+    OSERDES2:D1                0.000          PORT_1/clkout/oserdes_s
+    ----------------------------------------
+    Total                      1.303ns (0.447ns logic, 0.856ns route)
+                                       (34.3% logic, 65.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 99 / 99
+-------------------------------------------------------------------------
+Delay:               5.296ns (Levels of Logic = 3)
+  Source:            SPI_SS (PAD)
+  Destination:       SPI_MISO (PAD)
+
+  Data Path: SPI_SS to SPI_MISO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.721  SPI_SS_IBUF (SPI_SS_IBUF)
+     LUT2:I0->O            1   0.203   0.579  INSTANTIATION1/ready_spi_ss_AND_39_o_inv1 (INSTANTIATION1/ready_spi_ss_AND_39_o_inv)
+     OBUFT:T->O                2.571          SPI_MISO_OBUFT (SPI_MISO)
+    ----------------------------------------
+    Total                      5.296ns (3.996ns logic, 1.300ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock HDMI_TIMING/syncH
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+HDMI_TIMING/syncH                                |         |         |    2.436|         |
+PLL_EXT/CLKOUT1                                  |         |         |    5.851|         |
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2|         |         |    7.689|         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock INSTANTIATION1/spi_slave/done_q
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1|         |         |    1.063|         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL_EXT/CLKOUT1
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+HDMI_TIMING/syncH                                |         |    8.259|         |         |
+PLL_EXT/CLKOUT1                                  |    6.682|         |         |         |
+PLL_EXT/CLKOUT2                                  |    1.767|         |         |         |
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1|    5.864|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL_EXT/CLKOUT2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+PLL_EXT/CLKOUT1|    1.671|         |         |         |
+PLL_EXT/CLKOUT2|    2.881|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0|    5.352|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+HDMI_TIMING/syncH                                |         |    2.676|         |         |
+INSTANTIATION1/spi_slave/done_q                  |         |    1.179|         |         |
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT1|    4.070|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+PLL_EXT/CLKOUT1                                  |    2.620|         |         |         |
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT2|    5.900|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PROGAMMABLE_OSC/clk_400k
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+PROGAMMABLE_OSC/PIXEL_CLOCK/pll_base_inst/CLKOUT0|    1.693|         |         |         |
+PROGAMMABLE_OSC/clk_400k                         |    4.035|    3.088|    3.454|         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.06 secs
+ 
+--> 
+
+Total memory usage is 4528992 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  251 (   0 filtered)
+Number of infos    :  117 (   0 filtered)
+

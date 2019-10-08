@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Ying Yu/Desktop/Mojo_v3/faceAR/top.xst" -ofn "C:/Users/Ying Yu/Desktop/Mojo_v3/faceAR/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc dvi_demo.ucf -p xc6slx9-tqg144-3 "top.ngc" top.ngd  

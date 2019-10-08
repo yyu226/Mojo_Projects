@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6
+# Build 269223 by xbuild on Wed Jun  5 11:17:50 MDT 2013
+# Start of session at: Tue Apr 09 17:25:31 2019
+# Process ID: 38220
+# Log file: C:/Users/Ying Yu/Desktop/Mojo_v3/purple_inout/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/Ying Yu/Desktop/Mojo_v3/purple_inout/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Ying Yu/Desktop/Mojo_v3/purple_inout/pa.fromNetlist.tcl}
+set_property iostandard LVCMOS33 [get_ports [list {test_pin[1]} {test_pin[0]}]]
+save_constraints

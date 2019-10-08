@@ -1,0 +1,80 @@
+Release 14.6 - par P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Oct 03 17:44:04 2019
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 68 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   AVR_RX_BUSY_IBUF
+   Mram_lut10_RAMD_O
+   Mram_lut110_RAMD_O
+   Mram_lut111_RAMD_O
+   Mram_lut112_RAMD_O
+   Mram_lut113_RAMD_O
+   Mram_lut114_RAMD_O
+   Mram_lut115_RAMD_O
+   Mram_lut116_RAMD_O
+   Mram_lut117_RAMD_O
+   Mram_lut118_RAMD_O
+   Mram_lut119_RAMD_O
+   Mram_lut11_RAMD_O
+   Mram_lut120_RAMD_O
+   Mram_lut121_RAMD_O
+   Mram_lut122_RAMD_O
+   Mram_lut123_RAMD_O
+   Mram_lut124_RAMD_O
+   Mram_lut125_RAMD_O
+   Mram_lut126_RAMD_O
+   Mram_lut127_RAMD_O
+   Mram_lut128_RAMD_O
+   Mram_lut129_RAMD_O
+   Mram_lut12_RAMD_O
+   Mram_lut130_RAMD_O
+   Mram_lut131_RAMD_O
+   Mram_lut132_RAMD_O
+   Mram_lut13_RAMD_O
+   Mram_lut149_RAMD_O
+   Mram_lut14_RAMD_O
+   Mram_lut15_RAMD_O
+   Mram_lut16_RAMD_O
+   Mram_lut17_RAMD_O
+   Mram_lut18_RAMD_O
+   Mram_lut19_RAMD_O
+   Mram_lut20_RAMD_O
+   Mram_lut21_RAMD_O
+   Mram_lut22_RAMD_O
+   Mram_lut23_RAMD_O
+   Mram_lut24_RAMD_O
+   Mram_lut25_RAMD_O
+   Mram_lut26_RAMD_O
+   Mram_lut27_RAMD_O
+   Mram_lut28_RAMD_O
+   Mram_lut29_RAMD_O
+   Mram_lut2_RAMD_O
+   Mram_lut30_RAMD_O
+   Mram_lut31_RAMD_O
+   Mram_lut32_RAMD_O
+   Mram_lut33_RAMD_O
+   Mram_lut34_RAMD_O
+   Mram_lut35_RAMD_O
+   Mram_lut36_RAMD_O
+   Mram_lut37_RAMD_O
+   Mram_lut38_RAMD_O
+   Mram_lut39_RAMD_O
+   Mram_lut3_RAMD_O
+   Mram_lut40_RAMD_O
+   Mram_lut41_RAMD_O
+   Mram_lut4_RAMD_O
+   Mram_lut5_RAMD_O
+   Mram_lut6_RAMD_O
+   Mram_lut7_RAMD_O
+   Mram_lut8_RAMD_O
+   Mram_lut9_RAMD_O
+   UART_RX_IBUF
+   sync_in_1B2_IBUF
+   sync_in_2B2_IBUF
+
+

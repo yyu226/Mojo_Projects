@@ -1,0 +1,621 @@
+Release 14.6 ngdbuild P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc dvi_demo.ucf -p
+xc6slx9-tqg144-3 top.ngc top.ngd
+
+Reading NGO file "C:/Users/Ying Yu/Desktop/Mojo_v3/faceAR/top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "dvi_demo.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "clk100" LOC = P56;>
+   [dvi_demo.ucf(2)]: NET "clk100" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "clk100" LOC = P56;> [dvi_demo.ucf(2)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TX0_TMDS[3]" IOSTANDARD = TMDS_33;>
+   [dvi_demo.ucf(8)]: NET "TX0_TMDS[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TX0_TMDS[2]" IOSTANDARD = TMDS_33;>
+   [dvi_demo.ucf(9)]: NET "TX0_TMDS[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TX0_TMDS[1]" IOSTANDARD = TMDS_33;>
+   [dvi_demo.ucf(10)]: NET "TX0_TMDS[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TX0_TMDS[0]" IOSTANDARD = TMDS_33;>
+   [dvi_demo.ucf(11)]: NET "TX0_TMDS[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[3]" IOSTANDARD = TMDS_33;>
+   [dvi_demo.ucf(15)]: NET "RX0_TMDS[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[2]" IOSTANDARD = TMDS_33;>
+   [dvi_demo.ucf(16)]: NET "RX0_TMDS[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[1]" IOSTANDARD = TMDS_33;>
+   [dvi_demo.ucf(17)]: NET "RX0_TMDS[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[0]" IOSTANDARD = TMDS_33;>
+   [dvi_demo.ucf(18)]: NET "RX0_TMDS[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DDC_SCL" IOSTANDARD = I2C;>
+   [dvi_demo.ucf(23)]: NET "DDC_SCL" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DDC_SDA" IOSTANDARD = I2C;>
+   [dvi_demo.ucf(24)]: NET "DDC_SDA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DDC_SCL" CLOCK_DEDICATED_ROUTE =
+   FALSE;> [dvi_demo.ucf(26)]: NET "DDC_SCL" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[7]" IOSTANDARD = LVCMOS33;>
+   [dvi_demo.ucf(29)]: NET "LED[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[6]" IOSTANDARD = LVCMOS33;>
+   [dvi_demo.ucf(30)]: NET "LED[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[5]" IOSTANDARD = LVCMOS33;>
+   [dvi_demo.ucf(31)]: NET "LED[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[4]" IOSTANDARD = LVCMOS33;>
+   [dvi_demo.ucf(32)]: NET "LED[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[3]" IOSTANDARD = LVCMOS33;>
+   [dvi_demo.ucf(33)]: NET "LED[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[2]" IOSTANDARD = LVCMOS33;>
+   [dvi_demo.ucf(34)]: NET "LED[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[1]" IOSTANDARD = LVCMOS33;>
+   [dvi_demo.ucf(35)]: NET "LED[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[0]" IOSTANDARD = LVCMOS33;>
+   [dvi_demo.ucf(36)]: NET "LED[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "clk100" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(39)]: NET "clk100" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DDC_SCL" LOC = P112;>
+   [dvi_demo.ucf(42)]: NET "DDC_SCL" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DDC_SCL" LOC = P112;> [dvi_demo.ucf(42)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DDC_SDA" LOC = P111;>
+   [dvi_demo.ucf(43)]: NET "DDC_SDA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DDC_SDA" LOC = P111;> [dvi_demo.ucf(43)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TX0_TMDS[2]" LOC = P138;>
+   [dvi_demo.ucf(48)]: NET "TX0_TMDS[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "TX0_TMDS[2]" LOC = P138;> [dvi_demo.ucf(48)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TX0_TMDS[1]" LOC = P140;>
+   [dvi_demo.ucf(49)]: NET "TX0_TMDS[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "TX0_TMDS[1]" LOC = P140;> [dvi_demo.ucf(49)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TX0_TMDS[0]" LOC = P142;>
+   [dvi_demo.ucf(50)]: NET "TX0_TMDS[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "TX0_TMDS[0]" LOC = P142;> [dvi_demo.ucf(50)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TX0_TMDS[3]" LOC = P144;>
+   [dvi_demo.ucf(51)]: NET "TX0_TMDS[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "TX0_TMDS[3]" LOC = P144;> [dvi_demo.ucf(51)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[2]" LOC = P115;>
+   [dvi_demo.ucf(52)]: NET "RX0_TMDS[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RX0_TMDS[2]" LOC = P115;> [dvi_demo.ucf(52)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[1]" LOC = P117;>
+   [dvi_demo.ucf(53)]: NET "RX0_TMDS[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RX0_TMDS[1]" LOC = P117;> [dvi_demo.ucf(53)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[0]" LOC = P119;>
+   [dvi_demo.ucf(54)]: NET "RX0_TMDS[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RX0_TMDS[0]" LOC = P119;> [dvi_demo.ucf(54)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[3]" LOC = P121;>
+   [dvi_demo.ucf(55)]: NET "RX0_TMDS[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RX0_TMDS[3]" LOC = P121;> [dvi_demo.ucf(55)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <INST "dvi_rx0/ioclk_buf" LOC =
+   BUFPLL_X1Y5;> [dvi_demo.ucf(58)]: INST "dvi_rx0/ioclk_buf" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<INST "dvi_rx0/ioclk_buf" LOC = BUFPLL_X1Y5;> [dvi_demo.ucf(58)]' could not
+   be found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RX0_TMDS[3]" CLOCK_DEDICATED_ROUTE
+   = FALSE;> [dvi_demo.ucf(59)]: NET "RX0_TMDS[3]" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_in_1" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(62)]: NET "sync_in_1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_in_2" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(63)]: NET "sync_in_2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_out_1" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(64)]: NET "sync_out_1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_out_2" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(65)]: NET "sync_out_2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[7]" LOC = P134;>
+   [dvi_demo.ucf(68)]: NET "LED[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED[7]" LOC = P134;> [dvi_demo.ucf(68)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[6]" LOC = P133;>
+   [dvi_demo.ucf(69)]: NET "LED[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED[6]" LOC = P133;> [dvi_demo.ucf(69)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[5]" LOC = P132;>
+   [dvi_demo.ucf(70)]: NET "LED[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED[5]" LOC = P132;> [dvi_demo.ucf(70)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[4]" LOC = P131;>
+   [dvi_demo.ucf(71)]: NET "LED[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED[4]" LOC = P131;> [dvi_demo.ucf(71)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[3]" LOC = P127;>
+   [dvi_demo.ucf(72)]: NET "LED[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED[3]" LOC = P127;> [dvi_demo.ucf(72)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[2]" LOC = P126;>
+   [dvi_demo.ucf(73)]: NET "LED[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED[2]" LOC = P126;> [dvi_demo.ucf(73)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[1]" LOC = P124;>
+   [dvi_demo.ucf(74)]: NET "LED[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED[1]" LOC = P124;> [dvi_demo.ucf(74)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED[0]" LOC = P123;>
+   [dvi_demo.ucf(75)]: NET "LED[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED[0]" LOC = P123;> [dvi_demo.ucf(75)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_in_1" LOC = P16;>
+   [dvi_demo.ucf(78)]: NET "sync_in_1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sync_in_1" LOC = P16;> [dvi_demo.ucf(78)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_in_2" LOC = P21;>
+   [dvi_demo.ucf(79)]: NET "sync_in_2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sync_in_2" LOC = P21;> [dvi_demo.ucf(79)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_out_1" LOC = P17;>
+   [dvi_demo.ucf(80)]: NET "sync_out_1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sync_out_1" LOC = P17;> [dvi_demo.ucf(80)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_out_2" LOC = P22;>
+   [dvi_demo.ucf(81)]: NET "sync_out_2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sync_out_2" LOC = P22;> [dvi_demo.ucf(81)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "CLK_EXT" LOC = P51;>
+   [dvi_demo.ucf(84)]: NET "CLK_EXT" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "CLK_EXT" LOC = P51;> [dvi_demo.ucf(84)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "PO_SCL" IOSTANDARD = I2C;>
+   [dvi_demo.ucf(87)]: NET "PO_SCL" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "PO_SDA" IOSTANDARD = I2C;>
+   [dvi_demo.ucf(88)]: NET "PO_SDA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "PO_SCL" LOC = P23;>
+   [dvi_demo.ucf(91)]: NET "PO_SCL" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "PO_SCL" LOC = P23;> [dvi_demo.ucf(91)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "PO_SDA" LOC = P24;>
+   [dvi_demo.ucf(92)]: NET "PO_SDA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "PO_SDA" LOC = P24;> [dvi_demo.ucf(92)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "CLK_EXT" CLOCK_DEDICATED_ROUTE =
+   FALSE;> [dvi_demo.ucf(95)]: NET "CLK_EXT" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "clk100" CLOCK_DEDICATED_ROUTE =
+   FALSE;> [dvi_demo.ucf(96)]: NET "clk100" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "CLK_EXT" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(97)]: NET "CLK_EXT" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_in_1B2" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(100)]: NET "sync_in_1B2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_in_2B2" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(101)]: NET "sync_in_2B2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_out_1B2" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(102)]: NET "sync_out_1B2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_out_2B2" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(103)]: NET "sync_out_2B2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_in_1B2" LOC = P11;>
+   [dvi_demo.ucf(106)]: NET "sync_in_1B2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sync_in_1B2" LOC = P11;> [dvi_demo.ucf(106)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_in_2B2" LOC = P14;>
+   [dvi_demo.ucf(107)]: NET "sync_in_2B2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sync_in_2B2" LOC = P14;> [dvi_demo.ucf(107)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_out_1B2" LOC = P12;>
+   [dvi_demo.ucf(108)]: NET "sync_out_1B2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sync_out_1B2" LOC = P12;> [dvi_demo.ucf(108)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sync_out_2B2" LOC = P15;>
+   [dvi_demo.ucf(109)]: NET "sync_out_2B2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sync_out_2B2" LOC = P15;> [dvi_demo.ucf(109)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "CCLK" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(112)]: NET "CCLK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "CCLK" LOC = P70;>
+   [dvi_demo.ucf(115)]: NET "CCLK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "CCLK" LOC = P70;> [dvi_demo.ucf(115)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RST_N" LOC = P38;>
+   [dvi_demo.ucf(116)]: NET "RST_N" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RST_N" LOC = P38;> [dvi_demo.ucf(116)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RST_N" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(119)]: NET "RST_N" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "AVR_RX_BUSY" LOC = P39;>
+   [dvi_demo.ucf(122)]: NET "AVR_RX_BUSY" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "AVR_RX_BUSY" LOC = P39;> [dvi_demo.ucf(122)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "AVR_RX_BUSY" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(125)]: NET "AVR_RX_BUSY" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "UART_RX" LOC = P55;>
+   [dvi_demo.ucf(128)]: NET "UART_RX" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "UART_RX" LOC = P55;> [dvi_demo.ucf(128)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "UART_RX" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(131)]: NET "UART_RX" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "UART_TX" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(132)]: NET "UART_TX" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "UART_TX" LOC = P59;>
+   [dvi_demo.ucf(135)]: NET "UART_TX" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "UART_TX" LOC = P59;> [dvi_demo.ucf(135)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SPI_MISO" LOC = P45;>
+   [dvi_demo.ucf(138)]: NET "SPI_MISO" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SPI_MISO" LOC = P45;> [dvi_demo.ucf(138)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SPI_MISO" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(141)]: NET "SPI_MISO" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SPI_MOSI" LOC = P44;>
+   [dvi_demo.ucf(144)]: NET "SPI_MOSI" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SPI_MOSI" LOC = P44;> [dvi_demo.ucf(144)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SPI_MOSI" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(147)]: NET "SPI_MOSI" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SPI_SCK" LOC = P43;>
+   [dvi_demo.ucf(150)]: NET "SPI_SCK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SPI_SCK" LOC = P43;> [dvi_demo.ucf(150)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SPI_SCK" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(153)]: NET "SPI_SCK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SPI_SS" IOSTANDARD = LVTTL;>
+   [dvi_demo.ucf(154)]: NET "SPI_SS" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "SPI_SS" LOC = P48;>
+   [dvi_demo.ucf(157)]: NET "SPI_SS" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "SPI_SS" LOC = P48;> [dvi_demo.ucf(157)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <PIN
+   "PROGRAMMABLE_OSC/PIXEL_CLOCK/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;>
+   [dvi_demo.ucf(159)]: PIN "PROGRAMMABLE_OSC/PIXEL_CLOCK/clkout1_buf.O" not
+   found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:    84
+  Number of warnings:  40
+
+Total memory usage is 4422956 kilobytes
+
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "top.bld"...

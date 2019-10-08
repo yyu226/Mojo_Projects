@@ -1,0 +1,275 @@
+--------------------------------------------------------------------------------
+Release 14.6 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml dvi_demo.twx dvi_demo.ncd -o dvi_demo.twr dvi_demo.pcf
+-ucf dvi_demo.ucf
+
+Design file:              dvi_demo.ncd
+Physical constraint file: dvi_demo.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-06-08)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock RX0_TMDS<3>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RX0_TMDS<0> |   -2.889(R)|      FAST  |    6.979(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDS<1> |   -2.944(R)|      FAST  |    7.034(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDS<2> |   -2.889(R)|      FAST  |    6.979(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDSB<0>|   -2.889(R)|      FAST  |    6.978(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDSB<1>|   -2.944(R)|      FAST  |    7.033(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDSB<2>|   -2.889(R)|      FAST  |    6.978(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock RX0_TMDSB<3>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RX0_TMDS<0> |   -2.889(R)|      FAST  |    6.980(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDS<1> |   -2.944(R)|      FAST  |    7.035(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDS<2> |   -2.889(R)|      FAST  |    6.980(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDSB<0>|   -2.889(R)|      FAST  |    6.979(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDSB<1>|   -2.944(R)|      FAST  |    7.034(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+RX0_TMDSB<2>|   -2.889(R)|      FAST  |    6.979(R)|      SLOW  |dvi_rx0/pclkx10   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock clk100
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CCLK        |    2.671(R)|      SLOW  |   -0.487(R)|      SLOW  |CLOCK100          |   0.000|
+RST_N       |    3.098(R)|      SLOW  |   -0.894(R)|      SLOW  |CLOCK100          |   0.000|
+SPI_MOSI    |    1.375(R)|      SLOW  |   -0.299(R)|      SLOW  |CLOCK100          |   0.000|
+SPI_SCK     |    1.021(R)|      SLOW  |    0.034(R)|      SLOW  |CLOCK100          |   0.000|
+SPI_SS      |    1.002(R)|      SLOW  |    0.066(R)|      SLOW  |CLOCK100          |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK_EXT to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<5>      |        13.471(R)|      SLOW  |         7.995(R)|      FAST  |tx0_pclk          |   0.000|
+LED<6>      |        11.609(R)|      SLOW  |         6.721(R)|      FAST  |tx0_pclk          |   0.000|
+TX0_TMDS<0> |        10.380(R)|      SLOW  |         5.819(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<1> |        10.329(R)|      SLOW  |         5.768(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<2> |        10.380(R)|      SLOW  |         5.819(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<3> |        10.329(R)|      SLOW  |         5.768(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<0>|        10.422(R)|      SLOW  |         5.835(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<1>|        10.371(R)|      SLOW  |         5.784(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<2>|        10.422(R)|      SLOW  |         5.835(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<3>|        10.371(R)|      SLOW  |         5.784(R)|      FAST  |tx0_pclkx10       |   0.000|
+sync_out_1  |        12.996(R)|      SLOW  |         7.643(R)|      FAST  |tx0_pclk          |   0.000|
+sync_out_1B2|        12.782(R)|      SLOW  |         7.409(R)|      FAST  |tx0_pclk          |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock RX0_TMDS<3> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<5>      |        16.507(R)|      SLOW  |         9.488(R)|      FAST  |dvi_rx0/pclk      |   0.000|
+            |        15.751(R)|      SLOW  |         9.038(R)|      FAST  |tx0_pclk          |   0.000|
+LED<6>      |        13.889(R)|      SLOW  |         7.764(R)|      FAST  |tx0_pclk          |   0.000|
+TX0_TMDS<0> |        12.660(R)|      SLOW  |         6.862(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<1> |        12.609(R)|      SLOW  |         6.811(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<2> |        12.660(R)|      SLOW  |         6.862(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<3> |        12.609(R)|      SLOW  |         6.811(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<0>|        12.702(R)|      SLOW  |         6.878(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<1>|        12.651(R)|      SLOW  |         6.827(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<2>|        12.702(R)|      SLOW  |         6.878(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<3>|        12.651(R)|      SLOW  |         6.827(R)|      FAST  |tx0_pclkx10       |   0.000|
+sync_out_1  |        16.032(R)|      SLOW  |         9.136(R)|      FAST  |dvi_rx0/pclk      |   0.000|
+            |        15.276(R)|      SLOW  |         8.686(R)|      FAST  |tx0_pclk          |   0.000|
+sync_out_1B2|        15.088(R)|      SLOW  |         8.566(R)|      FAST  |dvi_rx0/pclk      |   0.000|
+            |        15.062(R)|      SLOW  |         8.452(R)|      FAST  |tx0_pclk          |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock RX0_TMDSB<3> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<5>      |        16.508(R)|      SLOW  |         9.488(R)|      FAST  |dvi_rx0/pclk      |   0.000|
+            |        15.752(R)|      SLOW  |         9.038(R)|      FAST  |tx0_pclk          |   0.000|
+LED<6>      |        13.890(R)|      SLOW  |         7.764(R)|      FAST  |tx0_pclk          |   0.000|
+TX0_TMDS<0> |        12.661(R)|      SLOW  |         6.862(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<1> |        12.610(R)|      SLOW  |         6.811(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<2> |        12.661(R)|      SLOW  |         6.862(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDS<3> |        12.610(R)|      SLOW  |         6.811(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<0>|        12.703(R)|      SLOW  |         6.878(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<1>|        12.652(R)|      SLOW  |         6.827(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<2>|        12.703(R)|      SLOW  |         6.878(R)|      FAST  |tx0_pclkx10       |   0.000|
+TX0_TMDSB<3>|        12.652(R)|      SLOW  |         6.827(R)|      FAST  |tx0_pclkx10       |   0.000|
+sync_out_1  |        16.033(R)|      SLOW  |         9.136(R)|      FAST  |dvi_rx0/pclk      |   0.000|
+            |        15.277(R)|      SLOW  |         8.686(R)|      FAST  |tx0_pclk          |   0.000|
+sync_out_1B2|        15.089(R)|      SLOW  |         8.566(R)|      FAST  |dvi_rx0/pclk      |   0.000|
+            |        15.063(R)|      SLOW  |         8.452(R)|      FAST  |tx0_pclk          |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock clk100 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<0>      |        15.013(R)|      SLOW  |         9.291(R)|      FAST  |clk100_IBUFG      |   0.000|
+LED<1>      |        11.888(R)|      SLOW  |         7.057(R)|      FAST  |clk100_IBUFG      |   0.000|
+LED<5>      |        14.711(R)|      SLOW  |         8.055(R)|      FAST  |clk100_IBUFG      |   0.000|
+PO_SCL      |        19.513(R)|      SLOW  |        13.714(R)|      FAST  |CLK_40M           |   0.000|
+SPI_MISO    |         9.742(R)|      SLOW  |         4.718(R)|      FAST  |CLOCK100          |   0.000|
+UART_TX     |         9.042(R)|      SLOW  |         4.867(R)|      FAST  |CLOCK100          |   0.000|
+sync_out_1  |        14.236(R)|      SLOW  |         7.703(R)|      FAST  |clk100_IBUFG      |   0.000|
+sync_out_1B2|        15.230(R)|      SLOW  |         7.957(R)|      FAST  |clk100_IBUFG      |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock sync_in_1 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<3>      |        13.661(F)|      SLOW  |         7.699(F)|      FAST  |LED<4>_inv        |   0.000|
+sync_out_2  |        12.068(F)|      SLOW  |         6.771(F)|      FAST  |LED<4>_inv        |   0.000|
+sync_out_2B2|        12.594(F)|      SLOW  |         7.093(F)|      FAST  |LED<4>_inv        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK_EXT
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_EXT        |    7.563|    7.563|         |         |
+RX0_TMDS<3>    |    9.843|    9.843|         |         |
+RX0_TMDSB<3>   |    9.844|    9.844|         |         |
+clk100         |    8.495|         |         |         |
+sync_in_1      |         |    5.169|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DDC_SCL
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DDC_SCL        |    4.989|         |    3.453|         |
+DDC_SDA        |    2.529|    0.052|         |         |
+clk100         |    2.413|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DDC_SDA
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DDC_SCL        |    1.348|    1.348|         |         |
+clk100         |    2.151|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RX0_TMDS<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_EXT        |    7.127|    5.849|         |         |
+RX0_TMDS<3>    |    8.129|    8.129|         |         |
+RX0_TMDSB<3>   |    8.130|    8.130|         |         |
+clk100         |    8.495|         |         |         |
+sync_in_1      |   -0.619|    6.164|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock RX0_TMDSB<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_EXT        |    7.127|    5.848|         |         |
+RX0_TMDS<3>    |    8.128|    8.128|         |         |
+RX0_TMDSB<3>   |    8.129|    8.129|         |         |
+clk100         |    8.495|         |         |         |
+sync_in_1      |   -0.619|    6.164|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_EXT        |    9.353|         |         |         |
+DDC_SCL        |    7.979|    3.815|         |         |
+DDC_SDA        |    2.346|    2.346|         |         |
+RX0_TMDS<3>    |   11.083|         |         |         |
+RX0_TMDSB<3>   |   11.083|         |         |         |
+clk100         |    4.859|         |         |         |
+sync_in_1      |    3.242|    3.242|         |         |
+sync_in_2      |    2.394|    2.394|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sync_in_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sync_in_1      |         |         |    0.736|    0.736|
+sync_in_2      |         |         |    1.025|    1.025|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sync_in_2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sync_in_1      |         |         |    0.466|    0.466|
+sync_in_2      |         |         |    0.755|    0.755|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+SPI_SS         |SPI_MISO       |    8.796|
+sync_in_1      |LED<3>         |   10.814|
+sync_in_1      |LED<4>         |    9.899|
+sync_in_1      |LED<5>         |   11.573|
+sync_in_1      |sync_out_1     |   11.098|
+sync_in_1      |sync_out_1B2   |   10.856|
+sync_in_1      |sync_out_2     |    9.221|
+sync_in_1      |sync_out_2B2   |    9.747|
+sync_in_2      |LED<2>         |   10.217|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Oct 03 17:06:45 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4611 MB
+
+
+
